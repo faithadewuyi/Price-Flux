@@ -1,13 +1,18 @@
-import { useState, FC } from 'react';
+import { useState } from 'react';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
-const Navbar: FC = () => {
+import { FaMoon } from "react-icons/fa6";
+import { IoSunnyOutline } from "react-icons/io5";
+import { ThemeProps } from '../context/types';
+
+const Navbar: React.FC<ThemeProps>= ({ toggleDarkMode, isDarkMode}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  
 
   return (
-    <div className="w-full p-5 px-[10%] items-center justify-between border-b-white border-b-2 flex gap-10">
+    <div className="w-full p-5 px-[10%] items-center justify-between border-b-white border-b-2 flex gap-10 fixed top-0 z-10">
     
       <div className="text-white">
         <img src="pricefl.webp" alt="Logo" className="hidden md:block  w-[max(10vw,100px)] h-20 rounded-sm" />
@@ -44,10 +49,15 @@ const Navbar: FC = () => {
           </select>
           <button className="flex items-center gap-2 px-2 py-2 rounded-lg font-semibold text-primary bg-gray-200">
             Sign Up
-            <img src="arrow_icon.png" alt="Arrow Icon" />
+            <img src="arrow_icon.png" alt="Arrow Icon" className='w-2 h-2' />
           </button>
         </div>
+
+         <button onClick={toggleDarkMode} className="p-2 rounded-full bg-gray-700 text-white">
+            {isDarkMode ? <FaMoon/> : < IoSunnyOutline />}
+          </button>  
       </div>
+      
     </div>
   );
 }
