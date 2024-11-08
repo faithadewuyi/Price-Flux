@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# MyApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- ![App Logo](./pricefl.webp)  -->
 
-Currently, two official plugins are available:
+## 🚀 Project Status: In Progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is currently under development. Some features might be incomplete, and the UI is subject to change.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📖 About
 
-- Configure the top-level `parserOptions` property like this:
+**Price Flux** is a real-time cryptocurrency tracking application that allows users to view up-to-date information on cryptocurrency prices, market trends, and more. The project is built using **React, TypeScript, Tailwind CSS,** and **React Router**.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📦 Technologies Used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Icons**: react-icons
+- **Routing**: React Router
+- **State Management**: React Context API 
+
+  
+---
+
+## 📝 Future Plans
+
+- [ ] Add detailed cryptocurrency information pages
+- [ ] Implement authentication for user accounts
+- [ ] Add user portfolio tracking
+- [ ] Integrate API for real-time data
+
+---
+
+
+
